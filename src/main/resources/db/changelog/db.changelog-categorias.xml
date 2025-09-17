@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.31.xsd">
+
+    <!-- Tabla Categorías -->
+    <changeSet id="20-categorias" author="german">
+        <createTable tableName="categorias">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nombre" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Tabla intermedia Producto-Categoría -->
+    <changeSet id="02-productos_categorias" author="german">
+        <createTable tableName="productos_categorias">
+            <column name="producto_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="categoria_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey
+                tableName="productos_categorias"
+                columnNames="producto_id, categoria_id"
+                constraintName="pk_productos_categorias"/>
+
+        <addForeignKeyConstraint
+                baseTableName="productos_categorias"
+                baseColumnNames="producto_id"
+                constraintName="fk_productos_categorias_productos"
+                referencedTableName="productos"
+                referencedColumnNames="id"
+                onDelete="CASCADE"/>
+
+        <addForeignKeyConstraint
+                baseTableName="productos_categorias"
+                baseColumnNames="categoria_id"
+                constraintName="fk_productos_categorias_categorias"
+                referencedTableName="categorias"
+                referencedColumnNames="id"
+                onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>

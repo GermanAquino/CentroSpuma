@@ -26,5 +26,6 @@
     <include file="db/changelog/db.changelog-usuarios.xml"/>
     <include file="db/changelog/db.changelog-detalles-facturas-update-columns.xml"/>
     <include file="db/changelog/db.changelog-proveedores-add-ruc.xml"/>
-
+    <include file="db/changelog/db.changelog-perfiles.xml"/>
+    <include file="db/changelog/db.changelog-categorias.xml"/>
 </databaseChangeLog>
