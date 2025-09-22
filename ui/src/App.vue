@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-<script setup>
-import Login from './components/Login.vue';
-</script>
-
-<template>
-  <Login />
-</template>
-
-<style scoped>
-</style>
-=======
 <template>
   <div id="app">
     <Dashboard />
+    <Login />
   </div>
 </template>
 
 <script setup>
 import Dashboard from "./views/Dashboard.vue"
+import Login from './components/Login.vue';
 </script>
 
 <style>
@@ -34,4 +24,3 @@ import Dashboard from "./views/Dashboard.vue"
   min-height: 100vh;
 }
 </style>
->>>>>>> 0f05dba4c106eda24479a8c742bad3b2b136babc

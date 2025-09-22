@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-=======
+}
+
 /* Contenedor general */
 .dashboard {
   display: flex;
@@ -153,5 +153,4 @@ h2 {
 
 .pagination button:hover:not(:disabled) {
   background: #174d9c;
->>>>>>> 0f05dba4c106eda24479a8c742bad3b2b136babc
 }
