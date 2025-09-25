@@ -1,0 +1,16 @@
+com\example\demo\DemoApplication.class
+com\ejemplo\demo\entities\Producto.class
+com\ejemplo\demo\entities\Factura.class
+com\ejemplo\demo\entities\Perfil.class
+com\ejemplo\demo\entities\Categoria.class
+com\ejemplo\demo\entities\AbstractEntity.class
+com\ejemplo\demo\entities\Cliente.class
+com\ejemplo\demo\entities\Role.class
+com\ejemplo\demo\entities\Venta.class
+com\ejemplo\demo\entities\Proveedor.class
+com\ejemplo\demo\entities\DetalleVenta.class
+com\ejemplo\demo\entities\DetalleFactura.class
+com\ejemplo\demo\enums\Rol.class
+com\ejemplo\demo\entities\Compra.class
+com\ejemplo\demo\entities\DetalleCompra.class
+com\ejemplo\demo\entities\Usuario.class

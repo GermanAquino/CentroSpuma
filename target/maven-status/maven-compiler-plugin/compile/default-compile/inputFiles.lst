@@ -1,0 +1,16 @@
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\DemoApplication.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\AbstractEntity.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Categoria.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Cliente.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Compra.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleCompra.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleFactura.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleVenta.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Factura.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Perfil.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Producto.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Proveedor.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Role.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Usuario.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Venta.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\enums\Rol.java

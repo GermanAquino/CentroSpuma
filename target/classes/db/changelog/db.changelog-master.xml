@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+
+
+
+    <!-- Incluir en orden -->
+    <include file="db/changelog/db.changelog-productos.xml"/>
+    <include file="db/changelog/db.changelog-clientes.xml"/>
+    <include file="db/changelog/db.changelog-proveedores.xml"/>
+    <include file="db/changelog/db.changelog-compras.xml"/>
+    <include file="db/changelog/db.changelog-ventas.xml"/>
+    <include file="db/changelog/db.changelog-facturas.xml"/>
+    <include file="db/changelog/db.changelog-detalles-compras.xml"/>
+    <include file="db/changelog/db.changelog-detalles-ventas.xml"/>
+    <include file="db/changelog/db.changelog-detalles-facturas.xml"/>
+    <include file="db/changelog/db.changelog-detalles-facturas-update.xml"/>
+    <include file="db/changelog/db.changelog-facturas-drop-venta-id.xml"/>
+    <include file="db/changelog/db.changelog-productos-rename-columns.xml"/>
+    <include file="db/changelog/db.changelog-clientes-add-ruc.xml"/>
+    <include file="db/changelog/db.changelog-facturas-add-cliente-id.xml"/>
+    <include file="db/changelog/db.changelog-roles.xml"/>
+    <include file="db/changelog/db.changelog-usuarios.xml"/>
+    <include file="db/changelog/db.changelog-detalles-facturas-update-columns.xml"/>
+    <include file="db/changelog/db.changelog-proveedores-add-ruc.xml"/>
+    <include file="db/changelog/db.changelog-perfiles.xml"/>
+    <include file="db/changelog/db.changelog-categorias.xml"/>
+</databaseChangeLog>

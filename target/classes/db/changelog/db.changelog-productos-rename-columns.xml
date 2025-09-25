@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="12-productos-rename-columns" author="german">
+        <!-- Renombrar columna precio_por_kilo a precio -->
+        <renameColumn tableName="productos" oldColumnName="precio_por_kilo" newColumnName="precio" columnDataType="NUMERIC(10,2)"/>
+
+        <!-- Renombrar columna stock_kilos a stock -->
+        <renameColumn tableName="productos" oldColumnName="stock_kilos" newColumnName="stock" columnDataType="NUMERIC(10,2)"/>
+    </changeSet>
+
+</databaseChangeLog>

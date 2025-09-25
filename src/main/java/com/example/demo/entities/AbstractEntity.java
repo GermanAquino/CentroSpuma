@@ -1,12 +1,10 @@
-package com.ejemplo.demo.entities;
+package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-
-import java.time.LocalDateTime;
 
 @MappedSuperclass
 @Getter

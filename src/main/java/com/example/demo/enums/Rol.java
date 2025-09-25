@@ -1,4 +1,4 @@
-package com.ejemplo.demo.enums;
+package com.example.demo.enums;
 
 public enum Rol {
     ADMIN,

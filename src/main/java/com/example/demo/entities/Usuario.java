@@ -1,4 +1,4 @@
-package com.ejemplo.demo.entities;
+package com.example.demo.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-import com.ejemplo.demo.enums.Rol;
+import com.example.demo.enums.Rol;
 
 @Entity
 @Table(name = "usuarios")

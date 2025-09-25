@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="17-detalles-facturas-update-columns" author="german">
+        <!-- 1. Eliminar columna cantidad -->
+        <dropColumn tableName="detalles_facturas" columnName="cantidad"/>
+        
+        <!-- 2. Renombrar columna precio a precio_total -->
+        <renameColumn tableName="detalles_facturas" oldColumnName="precio" newColumnName="precio_total" columnDataType="NUMERIC(10,2)"/>
+        
+        <!-- 3. Eliminar columna producto_id -->
+        <dropColumn tableName="detalles_facturas" columnName="producto_id"/>
+    </changeSet>
+
+</databaseChangeLog>
