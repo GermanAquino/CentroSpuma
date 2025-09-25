@@ -32,4 +32,3 @@ public class Usuario extends AbstractEntity {
     @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private Perfil perfil;
 }
-// public interface BaseRepository<T extends AbstractEntity, ID> extends JpaRepository<T, ID> {}

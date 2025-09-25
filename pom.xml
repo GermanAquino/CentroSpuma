@@ -71,6 +71,56 @@
 			<artifactId>spring-dotenv</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<!-- OkHttp -->
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>4.12.0</version>
+		</dependency>
+
+		<!-- OkHttp Logging -->
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>logging-interceptor</artifactId>
+			<version>4.12.0</version>
+		</dependency>
+
+		<!-- Okio (dependencia de OkHttp) -->
+		<dependency>
+			<groupId>com.squareup.okio</groupId>
+			<artifactId>okio</artifactId>
+			<version>3.9.0</version>
+		</dependency>
+
+		<!-- Gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<!-- Anotaciones javax.annotation (necesarias para código generado) -->
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<!-- GsonFire (extensión para Gson que usa OpenAPI Generator) -->
+		<dependency>
+			<groupId>io.gsonfire</groupId>
+			<artifactId>gson-fire</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -107,7 +157,40 @@
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
 			</plugin>
+			<plugin>
+			<groupId>org.openapitools</groupId>
+			<artifactId>openapi-generator-maven-plugin</artifactId>
+			<version>7.6.0</version>
+			<executions>
+				<execution>
+				<id>generate-dtos</id>
+				<goals>
+					<goal>generate</goal>
+				</goals>
+				<configuration>
+					<!-- Archivo OpenAPI -->
+					<inputSpec>${project.basedir}/src/main/resources/openapi/api.yaml</inputSpec>
+					
+					<!-- Lenguaje -->
+					<generatorName>java</generatorName>
+					
+					<!-- Paquete destino -->
+					<apiPackage>com.ejemplo.demo.api</apiPackage>
+					<modelPackage>com.ejemplo.demo.dto</modelPackage>
+					<invokerPackage>com.ejemplo.demo.invoker</invokerPackage>
+					
+					<!-- Carpeta destino -->
+					<output>${project.build.directory}/generated-sources/openapi</output>
+
+					<configOptions>
+						<interfaceOnly>true</interfaceOnly>
+						<useLombok>true</useLombok>
+						<skipDefaultInterface>true</skipDefaultInterface>
+					</configOptions>
+				</configuration>
+				</execution>
+			</executions>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
