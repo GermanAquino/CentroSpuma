@@ -49,7 +49,7 @@ import com.ejemplo.demo.invoker.JSON;
 /**
  * DetalleFacturaRequestDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-16T18:03:07.976398200-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-16T19:05:01.933974300-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
 public class DetalleFacturaRequestDTO {
   public static final String SERIALIZED_NAME_PRECIO_TOTAL = "precioTotal";
   @SerializedName(SERIALIZED_NAME_PRECIO_TOTAL)
