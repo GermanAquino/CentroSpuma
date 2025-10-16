@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="20-facturas-update-fecha_emision-numero_factura" author="kisser">
+        <!-- Agregamos la columna numero_factura -->
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <columnExists tableName="facturas" columnName="numero_factura"/>
+            </not>
+        </preConditions>
+
+        <addColumn tableName="facturas">
+            <column name="numero_factura" type="TEXT"></column>
+        </addColumn>
+
+        <addNotNullConstraint
+            tableName="facturas"
+            columnName="numero_factura"
+            columnDataType="TEXT"/>
+        
+        <addUniqueConstraint
+        tableName="facturas"
+        columnNames="numero_factura"
+        constraintName="uk_facturas_numero_factura"/>
+
+        <!-- Renombramos la columna fecha a fecha_emision -->
+        <renameColumn
+                    tableName="facturas"
+                    oldColumnName="fecha"
+                    newColumnName="fecha_emision"
+                    columnDataType="TIMESTAMP"
+        />
+        
+    </changeSet>
+</databaseChangeLog>

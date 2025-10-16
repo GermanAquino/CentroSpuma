@@ -1,0 +1,441 @@
+openapi: 3.0.1
+info:
+  title: Demo API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /usuarios:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UsuarioRequestDTO'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsuarioResponseDTO'
+          description: Usuario creado
+      summary: Crear usuario
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+components:
+  schemas:
+    UsuarioRequestDTO:
+      example:
+        rolId: 0
+        contrasena: contrasena
+        nombre: nombre
+        email: email
+        perfil:
+          avatarUrl: https://openapi-generator.tech
+          direccion: direccion
+          telefono: telefono
+      properties:
+        nombre:
+          type: string
+        email:
+          format: email
+          type: string
+        contrasena:
+          format: password
+          type: string
+        rolId:
+          format: int64
+          type: integer
+        perfil:
+          $ref: '#/components/schemas/PerfilRequestDTO'
+      required:
+      - contrasena
+      - email
+      - nombre
+      - rolId
+      type: object
+    UsuarioResponseDTO:
+      example:
+        id: 0
+        nombre: nombre
+        email: email
+        rol:
+          id: 6
+          nombre: nombre
+        perfil:
+          avatarUrl: https://openapi-generator.tech
+          direccion: direccion
+          id: 1
+          telefono: telefono
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+        email:
+          type: string
+        rol:
+          $ref: '#/components/schemas/RolResponseDTO'
+        perfil:
+          $ref: '#/components/schemas/PerfilResponseDTO'
+      type: object
+    RolResponseDTO:
+      example:
+        id: 6
+        nombre: nombre
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+      type: object
+    PerfilRequestDTO:
+      example:
+        avatarUrl: https://openapi-generator.tech
+        direccion: direccion
+        telefono: telefono
+      properties:
+        telefono:
+          type: string
+        direccion:
+          type: string
+        avatarUrl:
+          format: uri
+          type: string
+      type: object
+    PerfilResponseDTO:
+      example:
+        avatarUrl: https://openapi-generator.tech
+        direccion: direccion
+        id: 1
+        telefono: telefono
+      properties:
+        id:
+          format: int64
+          type: integer
+        telefono:
+          type: string
+        direccion:
+          type: string
+        avatarUrl:
+          format: uri
+          type: string
+      type: object
+    CategoriaRequestDTO:
+      properties:
+        nombre:
+          type: string
+      required:
+      - nombre
+      type: object
+    CategoriaResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+        productosIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+      type: object
+    ProveedorRequestDTO:
+      properties:
+        nombre:
+          type: string
+        direccion:
+          nullable: true
+          type: string
+        telefono:
+          nullable: true
+          type: string
+        ruc:
+          nullable: true
+          type: string
+      required:
+      - nombre
+      type: object
+    ProveedorResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+        direccion:
+          nullable: true
+          type: string
+        telefono:
+          nullable: true
+          type: string
+        ruc:
+          nullable: true
+          type: string
+      type: object
+    ClienteRequestDTO:
+      properties:
+        nombre:
+          type: string
+        direccion:
+          nullable: true
+          type: string
+        telefono:
+          nullable: true
+          type: string
+        ruc:
+          nullable: true
+          type: string
+      required:
+      - nombre
+      type: object
+    ClienteResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+        direccion:
+          nullable: true
+          type: string
+        telefono:
+          nullable: true
+          type: string
+        ruc:
+          nullable: true
+          type: string
+      type: object
+    VentaRequestDTO:
+      properties:
+        clienteId:
+          format: int64
+          type: integer
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleVentaRequestDTO'
+          type: array
+      type: object
+    VentaResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        cliente:
+          $ref: '#/components/schemas/ClienteResponseDTO'
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleVentaResponseDTO'
+          type: array
+      type: object
+    DetalleVentaRequestDTO:
+      properties:
+        productoId:
+          format: int64
+          type: integer
+        cantidad:
+          format: double
+          type: number
+        precio:
+          format: double
+          type: number
+      type: object
+    DetalleVentaResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        producto:
+          $ref: '#/components/schemas/ProductoResponseDTO'
+        cantidad:
+          format: double
+          type: number
+        precio:
+          format: double
+          type: number
+      type: object
+    ProductoRequestDTO:
+      properties:
+        nombre:
+          type: string
+        descripcion:
+          type: string
+        precio:
+          format: double
+          type: number
+        stock:
+          format: double
+          type: number
+        categoriasIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+      type: object
+    ProductoResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        nombre:
+          type: string
+        descripcion:
+          type: string
+        precio:
+          format: double
+          type: number
+        stock:
+          format: double
+          type: number
+        categorias:
+          items:
+            $ref: '#/components/schemas/CategoriaResponseDTO'
+          type: array
+      type: object
+    CompraRequestDTO:
+      properties:
+        proveedorId:
+          format: int64
+          type: integer
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleCompraRequestDTO'
+          type: array
+      required:
+      - detalles
+      - proveedorId
+      - total
+      type: object
+    CompraResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        proveedor:
+          $ref: '#/components/schemas/ProveedorResponseDTO'
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleCompraResponseDTO'
+          type: array
+      type: object
+    DetalleCompraRequestDTO:
+      properties:
+        productoId:
+          format: int64
+          type: integer
+        cantidad:
+          format: double
+          type: number
+        precio:
+          format: double
+          type: number
+      required:
+      - cantidad
+      - precio
+      - productoId
+      type: object
+    DetalleCompraResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        producto:
+          $ref: '#/components/schemas/ProductoResponseDTO'
+        cantidad:
+          format: double
+          type: number
+        precio:
+          format: double
+          type: number
+      type: object
+    FacturaRequestDTO:
+      properties:
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        clienteId:
+          format: int64
+          type: integer
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleFacturaRequestDTO'
+          type: array
+      required:
+      - clienteId
+      - detalles
+      - total
+      type: object
+    FacturaResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        fecha:
+          format: date-time
+          type: string
+        total:
+          format: double
+          type: number
+        cliente:
+          $ref: '#/components/schemas/ClienteResponseDTO'
+        detalles:
+          items:
+            $ref: '#/components/schemas/DetalleFacturaResponseDTO'
+          type: array
+      type: object
+    DetalleFacturaRequestDTO:
+      properties:
+        precioTotal:
+          format: double
+          type: number
+        ventaId:
+          format: int64
+          type: integer
+      required:
+      - precioTotal
+      - ventaId
+      type: object
+    DetalleFacturaResponseDTO:
+      properties:
+        id:
+          format: int64
+          type: integer
+        precioTotal:
+          format: double
+          type: number
+        venta:
+          $ref: '#/components/schemas/VentaResponseDTO'
+      type: object
+

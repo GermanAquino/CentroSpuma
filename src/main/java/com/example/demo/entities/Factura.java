@@ -19,8 +19,11 @@ import java.util.List;
 @AllArgsConstructor
 public class Factura extends AbstractEntity {
 
-    @Column
-    private OffsetDateTime fecha;
+    @Column (name = "fecha_emision", nullable = false)
+    private OffsetDateTime fechaEmision;
+
+    @Column (name = "numero_factura", nullable = false, unique = true)
+    private String numeroFactura;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal total;

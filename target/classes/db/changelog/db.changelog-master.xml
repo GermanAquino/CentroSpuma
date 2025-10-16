@@ -5,8 +5,6 @@
             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
 
 
-
-
     <!-- Incluir en orden -->
     <include file="db/changelog/db.changelog-productos.xml"/>
     <include file="db/changelog/db.changelog-clientes.xml"/>
@@ -28,4 +26,6 @@
     <include file="db/changelog/db.changelog-proveedores-add-ruc.xml"/>
     <include file="db/changelog/db.changelog-perfiles.xml"/>
     <include file="db/changelog/db.changelog-categorias.xml"/>
+    <include file="db/changelog/db.changelog-facturas-update-fecha_emision-numero_factura.xml"/>
+    <include file="db/changelog/db.changelog-detalles-facturas-relacion-factura.xml"/>
 </databaseChangeLog>
