@@ -66,6 +66,7 @@ components:
           format: int64
         nombre:
           type: string
+
     PerfilRequestDTO:
       type: object
       properties:
@@ -75,7 +76,6 @@ components:
           type: string
         avatarUrl:
           type: string
-          format: uri
 
     PerfilResponseDTO:
       type: object
@@ -89,7 +89,7 @@ components:
           type: string
         avatarUrl:
           type: string
-          format: uri
+
     CategoriaRequestDTO:
       type: object
       properties:

@@ -12,7 +12,10 @@ import lombok.AllArgsConstructor;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Perfil extends AbstractEntity {
+public class Perfil {
+
+    @Id
+    private Long id; //mismo id que el usuario
 
     @OneToOne
     @MapsId

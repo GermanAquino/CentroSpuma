@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.net.URI;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -50,7 +49,7 @@ import com.ejemplo.demo.invoker.JSON;
 /**
  * PerfilRequestDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-16T19:05:01.933974300-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-17T01:51:57.861885800-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
 public class PerfilRequestDTO {
   public static final String SERIALIZED_NAME_TELEFONO = "telefono";
   @SerializedName(SERIALIZED_NAME_TELEFONO)
@@ -62,7 +61,7 @@ public class PerfilRequestDTO {
 
   public static final String SERIALIZED_NAME_AVATAR_URL = "avatarUrl";
   @SerializedName(SERIALIZED_NAME_AVATAR_URL)
-  private URI avatarUrl;
+  private String avatarUrl;
 
   public PerfilRequestDTO() {
   }
@@ -105,7 +104,7 @@ public class PerfilRequestDTO {
   }
 
 
-  public PerfilRequestDTO avatarUrl(URI avatarUrl) {
+  public PerfilRequestDTO avatarUrl(String avatarUrl) {
     this.avatarUrl = avatarUrl;
     return this;
   }
@@ -115,11 +114,11 @@ public class PerfilRequestDTO {
    * @return avatarUrl
   **/
   @javax.annotation.Nullable
-  public URI getAvatarUrl() {
+  public String getAvatarUrl() {
     return avatarUrl;
   }
 
-  public void setAvatarUrl(URI avatarUrl) {
+  public void setAvatarUrl(String avatarUrl) {
     this.avatarUrl = avatarUrl;
   }
 

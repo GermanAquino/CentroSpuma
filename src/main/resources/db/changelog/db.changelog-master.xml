@@ -28,4 +28,5 @@
     <include file="db/changelog/db.changelog-categorias.xml"/>
     <include file="db/changelog/db.changelog-facturas-update-fecha_emision-numero_factura.xml"/>
     <include file="db/changelog/db.changelog-detalles-facturas-relacion-factura.xml"/>
+    <include file="db/changelog/db.changelog-recreate-perfiles.xml"/>
 </databaseChangeLog>

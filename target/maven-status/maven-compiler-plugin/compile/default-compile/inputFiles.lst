@@ -1,3 +1,4 @@
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\config\SwaggerConfig.java
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\DemoApplication.java
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\AbstractEntity.java
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Categoria.java
@@ -14,6 +15,16 @@ C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Role
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Usuario.java
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Venta.java
 C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\enums\Rol.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\controller\UsuarioController.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilRequestDTO.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilResponseDTO.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\RolResponseDTO.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioRequestDTO.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioResponseDTO.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\PerfilRepository.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\RolRepository.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\UsuarioRepository.java
+C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\service\UsuarioService.java
 C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\api\DefaultApi.java
 C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\AbstractOpenApiSchema.java
 C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CategoriaRequestDTO.java

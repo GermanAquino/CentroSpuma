@@ -10,7 +10,7 @@
 |**id** | **Long** |  |  [optional] |
 |**telefono** | **String** |  |  [optional] |
 |**direccion** | **String** |  |  [optional] |
-|**avatarUrl** | **URI** |  |  [optional] |
+|**avatarUrl** | **String** |  |  [optional] |
 
 
 
