@@ -10,12 +10,14 @@
       <section class="content">
         <h2>Resumen de ventas</h2>
         <SearchBar @search="handleSearch" />
+
         <SalesTable :sales="filteredSales" />
+
         <Pagination
           :page="page"
           :totalPages="totalPages"
-          @prev="page--"
-          @next="page++"
+          @prev="changePage(page - 1)"
+          @next="changePage(page + 1)"
         />
       </section>
     </div>
@@ -23,64 +25,77 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue"
-import Sidebar from "../components/Sidebar.vue"
-import Navbar from "../components/Navbar.vue"
-import SearchBar from "../components/SearchBar.vue"
-import SalesTable from "../components/SalesTable.vue"
-import Pagination from "../components/Pagination.vue"
+import { ref, computed, onMounted } from "vue";
+import Sidebar from "../components/Sidebar.vue";
+import Navbar from "../components/Navbar.vue";
+import SearchBar from "../components/SearchBar.vue";
+import SalesTable from "../components/SalesTable.vue";
+import Pagination from "../components/Pagination.vue";
+import { getVentas } from "../services/VentasService";
 
-const sales = ref([
-  {
-    cliente: "Juan Pérez",
-    fecha: "20-02-2025",
-    vendedor: "Seba Kisser",
-    metodoPago: "Efectivo",
-    documento: "Ticket",
-    producto: "Poliuretano 500ml",
-    total: "30.000",
-  },
-  {
-    cliente: "Maria Gómez",
-    fecha: "20-02-2025",
-    vendedor: "Daniel Ferreira",
-    metodoPago: "Crédito",
-    documento: "Ticket",
-    producto: "Poliuretano 250ml",
-    total: "18.000",
-  },
-])
+const sales = ref([]);
+const filters = ref({ client: "", date: "" });
+const page = ref(0);
+const totalPages = ref(1);
 
-const filters = ref({ client: "", date: "" })
-const page = ref(1)
-const totalPages = ref(1)
+// Cargar ventas desde el backend
+const loadSales = async () => {
+  try {
+    const data = await getVentas(page.value, 10);
 
+    // mapeamos para frontend
+    sales.value = data.content.map(s => ({
+      id: s.id,
+      cliente: s.clienteNombre,
+      clienteRuc: s.clienteRuc, // agregamos RUC
+      fecha: new Date(s.fecha).toLocaleDateString(), // opcional: formatear fecha
+      total: s.total,
+      producto: s.detalles
+        .map(d => `${d.productoNombre} (x${d.cantidad}, ${d.precio})`) // nombre, cantidad y precio
+        .join(", ")
+    }));
+
+    totalPages.value = data.totalPages;
+  } catch (error) {
+    console.error("Error al cargar ventas:", error);
+  }
+};
+
+onMounted(() => {
+  loadSales();
+});
+
+// Filtrado por cliente o fecha
 const filteredSales = computed(() => {
-  return sales.value.filter((s) => {
+  return sales.value.filter(s => {
     return (
-      (!filters.value.client ||
-        s.cliente.toLowerCase().includes(filters.value.client.toLowerCase())) &&
+      (!filters.value.client || s.clienteNombre.toLowerCase().includes(filters.value.client.toLowerCase())) &&
       (!filters.value.date || s.fecha === filters.value.date)
-    )
-  })
-})
+    );
+  });
+});
 
 const handleSearch = (f) => {
-  filters.value = f
-}
+  filters.value = f;
+};
+
+const changePage = async (p) => {
+  if (p >= 0 && p < totalPages.value) {
+    page.value = p;
+    await loadSales();
+  }
+};
 </script>
 
 <style scoped>
-/* 🔹 Eliminar cualquier margen del body y asegurar altura completa */
 :global(html, body, #app) {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden; /* evita scroll horizontal */
+  overflow: hidden;
 }
 
-/* 🔹 Layout principal */
 .dashboard {
   display: flex;
   height: 100vh;
@@ -88,7 +103,6 @@ const handleSearch = (f) => {
   overflow: hidden;
 }
 
-/* 🔹 Contenedor principal */
 .main-content {
   flex: 1;
   display: flex;
@@ -98,7 +112,6 @@ const handleSearch = (f) => {
   overflow-x: hidden;
 }
 
-/* 🔹 Contenido del dashboard */
 .content {
   flex: 1;
   padding: 24px;

@@ -18,29 +18,32 @@ defineProps({
 .product-card {
   background-color: #f8f6fc;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease;
   cursor: pointer;
+  width: 220px;  /* ancho fijo opcional */
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .product-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  width: 120px;          /* más grande */
+  height: 120px;         /* más grande */
+  object-fit: cover;     /* mantiene proporción y ocupa más área */
+  border-radius: 12px;   /* bordes redondeados opcionales */
+  margin-bottom: 12px;
 }
 
 .product-info p {
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
+  font-size: 1.1rem;     /* un poco más grande */
 }
 </style>

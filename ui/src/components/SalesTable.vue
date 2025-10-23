@@ -5,9 +5,7 @@
         <th>N°</th>
         <th>Cliente</th>
         <th>Fecha</th>
-        <th>Vendedor</th>
-        <th>Método Pago</th>
-        <th>Documento</th>
+        <th>RUC</th>
         <th>Producto</th>
         <th>Total</th>
         <th>Acciones</th>
@@ -18,9 +16,7 @@
         <td>{{ index + 1 }}</td>
         <td>{{ sale.cliente }}</td>
         <td>{{ sale.fecha }}</td>
-        <td>{{ sale.vendedor }}</td>
-        <td>{{ sale.metodoPago }}</td>
-        <td>{{ sale.documento }}</td>
+        <td>{{ sale.clienteRuc }}</td>
         <td>{{ sale.producto }}</td>
         <td>{{ sale.total }}</td>
         <td>

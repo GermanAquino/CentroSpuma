@@ -1,6 +1,7 @@
-import { createRouter, createWebHistory } from "vue-router"
-import Dashboard from "../views/Dashboard.vue"
-import InventoryView from "../views/InventoryView.vue"
+import { createRouter, createWebHistory } from "vue-router";
+import Dashboard from "../views/Dashboard.vue";
+import InventoryView from "../views/InventoryView.vue";
+import ClientesView from "../views/ClientesView.vue"; // <-- Importa la vista de clientes
 
 const routes = [
   {
@@ -13,11 +14,16 @@ const routes = [
     name: "inventario",
     component: InventoryView,
   },
-]
+  {
+    path: "/clientes", // <-- Nueva ruta
+    name: "clientes",
+    component: ClientesView,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
+});
 
-export default router
+export default router;

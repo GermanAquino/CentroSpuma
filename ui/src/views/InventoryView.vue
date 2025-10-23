@@ -11,11 +11,11 @@
 
       <div class="cards-grid">
         <ProductCard
-          v-for="(product, index) in products"
-          :key="index"
-          :name="product.name"
-          :image="product.image"
-        />
+            v-for="(product, index) in products"
+            :key="product.id || index"
+            :name="product.nombre"
+            :image="product.image"
+            />
       </div>
 
       <FloatingButton @click="addProduct" />
@@ -24,24 +24,44 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
-import Sidebar from "../components/Sidebar.vue"
-import SearchBar from "../components/SearchBar.vue"
-import ProductCard from "../components/ProductCard.vue"
-import FloatingButton from "../components/FloatingButton.vue"
+import { ref, onMounted } from "vue";
+import Sidebar from "../components/Sidebar.vue";
+import SearchBar from "../components/SearchBar.vue";
+import ProductCard from "../components/ProductCard.vue";
+import FloatingButton from "../components/FloatingButton.vue";
+import { getProductos } from "../services/productosService";
 
-const products = ref([
-  { name: "Poliuretano 500ml", image: "/images/sample1.png" },
-  { name: "Espuma 250ml", image: "/images/sample2.png" },
-  { name: "Silicona Blanca", image: "/images/sample3.png" },
-  { name: "Sellador Gris", image: "/images/sample4.png" },
-  { name: "Pistola aplicadora", image: "/images/sample5.png" },
-  { name: "Removedor industrial", image: "/images/sample6.png" },
-])
+const placeholderImage = "https://i1.wp.com/gelatologia.com/wp-content/uploads/2020/07/placeholder.png?ssl=1";
+const products = ref([]);
+const page = ref(0);
+const totalPages = ref(1);
 
-const addProduct = () => {
-  console.log("Nuevo producto")
-}
+const loadProducts = async () => {
+  try {
+    const data = await getProductos(page.value, 20); // page y size
+    // Agregar la imagen placeholder si no hay imagen real
+    products.value = data.content.map((p) => ({
+      ...p,
+      image: placeholderImage,
+    }));
+    totalPages.value = data.totalPages;
+  } catch (error) {
+    console.error("Error al cargar productos:", error);
+  }
+};
+
+const changePage = async (p) => {
+  if (p >= 0 && p < totalPages.value) {
+    page.value = p;
+    await loadProducts();
+  }
+};
+
+onMounted(() => {
+  loadProducts();
+});
+
+
 </script>
 
 <style scoped>
