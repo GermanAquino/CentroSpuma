@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <Dashboard />
-    <Login />
+    <router-view />
   </div>
 </template>
 
 <script setup>
-import Dashboard from "./views/Dashboard.vue"
-import Login from './components/Login.vue';
+// No hace falta importar Dashboard ni InventoryView aquí.
+// El router se encargará de renderizar la vista correcta.
 </script>
 
 <style>
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -22,5 +20,6 @@ import Login from './components/Login.vue';
 #app {
   display: flex;
   min-height: 100vh;
+  width: 100vw;
 }
 </style>

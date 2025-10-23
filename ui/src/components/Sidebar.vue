@@ -11,12 +11,12 @@
 
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Inventario</a></li>
-        <li><a href="#">Ventas</a></li>
-        <li><a href="#">Facturación</a></li>
-        <li><a href="#">Reportes</a></li>
-        <li><a href="#">Usuarios</a></li>
+      <li><router-link to="/">Inicio</router-link></li>
+      <li><router-link to="/inventario" class="active-link">Inventario</router-link></li>
+      <li><router-link to="/ventas">Ventas</router-link></li>
+      <li><router-link to="/facturacion">Facturación</router-link></li>
+      <li><router-link to="/reportes">Reportes</router-link></li>
+      <li><router-link to="/usuarios">Usuarios</router-link></li>
       </ul>
     </nav>
   </aside>
