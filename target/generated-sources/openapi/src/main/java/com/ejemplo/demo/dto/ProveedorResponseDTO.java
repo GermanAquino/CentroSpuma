@@ -50,7 +50,7 @@ import com.ejemplo.demo.invoker.JSON;
 /**
  * ProveedorResponseDTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-17T01:51:57.861885800-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T23:47:25.813310700-03:00[America/Asuncion]", comments = "Generator version: 7.6.0")
 public class ProveedorResponseDTO {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
