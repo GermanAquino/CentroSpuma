@@ -13,9 +13,9 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")              // Aplica a todos los endpoints
-                        .allowedOrigins("http://localhost:5173") // Origen del frontend
-                        .allowedMethods("*");          // Todos los métodos HTTP
+                registry.addMapping("/**")              
+                        .allowedOrigins("http://localhost:5173") 
+                        .allowedMethods("*");          
             }
         };
     }

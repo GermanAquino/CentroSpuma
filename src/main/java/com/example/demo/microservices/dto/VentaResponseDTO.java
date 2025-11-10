@@ -12,6 +12,8 @@ import java.util.List;
 public class VentaResponseDTO {
     private Long id;
     private Long clienteId;
+    private String clienteNombre;
+    private String clienteRuc;
     private OffsetDateTime fecha;
     private BigDecimal total;
     private List<DetalleVentaResponseDTO> detalles;

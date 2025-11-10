@@ -117,12 +117,12 @@ public class VentaService {
         ventaRepository.delete(venta);
     }
 
-    // Mapeo de entidad Venta a DTO de respuesta
     private VentaResponseDTO mapToResponse(Venta venta) {
         List<DetalleVentaResponseDTO> detallesDTO = venta.getDetalles().stream()
                 .map(d -> new DetalleVentaResponseDTO(
                         d.getId(),
                         d.getProducto().getId(),
+                        d.getProducto().getNombre(), // agregamos nombre del producto
                         d.getCantidad(),
                         d.getPrecio()
                 ))
@@ -131,6 +131,8 @@ public class VentaService {
         return new VentaResponseDTO(
                 venta.getId(),
                 venta.getCliente().getId(),
+                venta.getCliente().getNombre(), // agregamos nombre del cliente
+                venta.getCliente().getRuc(),    // agregamos RUC del cliente
                 venta.getFecha(),
                 venta.getTotal(),
                 detallesDTO
