@@ -19,8 +19,10 @@
       </div>
 
       <FloatingButton @click="addProduct" />
+
     </div>
   </div>
+  <AddProductForm :visible="showForm" @close="showForm = false" @saved="loadProducts" />
 </template>
 
 <script setup>
@@ -29,17 +31,18 @@ import Sidebar from "../components/Sidebar.vue";
 import SearchBar from "../components/SearchBar.vue";
 import ProductCard from "../components/ProductCard.vue";
 import FloatingButton from "../components/FloatingButton.vue";
-import { getProductos } from "../services/productosService";
+import AddProductForm from "../components/AddProductForm.vue";
+import { addProducto, getProductos } from "../services/productosService";
 
 const placeholderImage = "https://i1.wp.com/gelatologia.com/wp-content/uploads/2020/07/placeholder.png?ssl=1";
 const products = ref([]);
 const page = ref(0);
 const totalPages = ref(1);
+const showForm = ref(false);
 
 const loadProducts = async () => {
   try {
-    const data = await getProductos(page.value, 20); // page y size
-    // Agregar la imagen placeholder si no hay imagen real
+    const data = await getProductos(page.value, 20);
     products.value = data.content.map((p) => ({
       ...p,
       image: placeholderImage,
@@ -57,11 +60,29 @@ const changePage = async (p) => {
   }
 };
 
+const addProduct = () => {
+  showForm.value = true;
+};
+
+const handleSaveProduct = async (newProduct) => {
+  console.log("📦 Enviando producto:", newProduct);
+  try {
+    
+    const saved = await addProducto(newProduct);
+    products.value.unshift({
+      ...saved,
+      image: placeholderImage,
+    });
+    alert("Producto agregado correctamente");
+  } catch (error) {
+    console.error("Error al agregar producto:", error);
+    alert("No se pudo agregar el producto");
+  }
+};
+
 onMounted(() => {
   loadProducts();
 });
-
-
 </script>
 
 <style scoped>

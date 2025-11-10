@@ -5,8 +5,7 @@
 </template>
 
 <script setup>
-// No hace falta importar Dashboard ni InventoryView aquí.
-// El router se encargará de renderizar la vista correcta.
+
 </script>
 
 <style>
