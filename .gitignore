@@ -1,0 +1,9 @@
+# Esto ignora la carpeta 'target' en la raíz y todo su contenido.
+target/
+
+# Es común ignorar también archivos compilados
+*.class
+*.jar
+
+# Archivos de entorno
+.env

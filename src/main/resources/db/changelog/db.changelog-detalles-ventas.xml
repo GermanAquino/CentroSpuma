@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="8-detalles-ventas" author="german">
+        <createTable tableName="detalles_ventas">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="venta_id" type="BIGINT">
+                <constraints nullable="false" referencedTableName="ventas" referencedColumnNames="id" foreignKeyName="fk_detalles_ventas_ventas"/>
+            </column>
+
+            <column name="producto_id" type="BIGINT">
+                <constraints nullable="false" referencedTableName="productos" referencedColumnNames="id" foreignKeyName="fk_detalles_ventas_productos"/>
+            </column>
+
+            <column name="cantidad" type="NUMERIC(10,2)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="precio" type="NUMERIC(10,2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
