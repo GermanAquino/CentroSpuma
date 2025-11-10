@@ -5,9 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-
-import java.util.List;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -20,6 +19,6 @@ public class Role extends AbstractEntity {
     @Column(nullable = false, unique = true)
     private String nombre;
 
-    @OneToMany(mappedBy = "rol")
-    private List<Usuario> usuarios = new ArrayList<>();
+    @ManyToMany(mappedBy = "roles")
+    private Set<Usuario> usuarios = new HashSet<>();
 }

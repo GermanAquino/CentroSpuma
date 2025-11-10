@@ -6,7 +6,8 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-import com.example.demo.enums.Rol;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "usuarios")
@@ -25,10 +26,11 @@ public class Usuario extends AbstractEntity {
     @Column(nullable = false)
     private String contrasena;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "rol_id", nullable = false)
-    private Role rol;
-
-    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Perfil perfil;
+    @ManyToMany
+    @JoinTable(
+        name = "usuarios_roles",
+        joinColumns = @JoinColumn(name = "usuario_id"),
+        inverseJoinColumns = @JoinColumn(name = "rol_id")
+    )
+    private Set<Role> roles = new HashSet<>();
 }
