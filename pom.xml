@@ -182,40 +182,6 @@
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
 			</plugin>
-			<plugin>
-			<groupId>org.openapitools</groupId>
-			<artifactId>openapi-generator-maven-plugin</artifactId>
-			<version>7.6.0</version>
-			<executions>
-				<execution>
-				<id>generate-dtos</id>
-				<goals>
-					<goal>generate</goal>
-				</goals>
-				<configuration>
-					<!-- Archivo OpenAPI -->
-					<inputSpec>${project.basedir}/src/main/resources/openapi/api.yaml</inputSpec>
-					
-					<!-- Lenguaje -->
-					<generatorName>java</generatorName>
-					
-					<!-- Paquete destino -->
-					<apiPackage>com.ejemplo.demo.api</apiPackage>
-					<modelPackage>com.ejemplo.demo.dto</modelPackage>
-					<invokerPackage>com.ejemplo.demo.invoker</invokerPackage>
-					
-					<!-- Carpeta destino -->
-					<output>${project.build.directory}/generated-sources/openapi</output>
-
-					<configOptions>
-						<interfaceOnly>true</interfaceOnly>
-						<useLombok>true</useLombok>
-						<skipDefaultInterface>true</skipDefaultInterface>
-					</configOptions>
-				</configuration>
-				</execution>
-			</executions>
-			</plugin>
 		</plugins>
 	</build>
 </project>
