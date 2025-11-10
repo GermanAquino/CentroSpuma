@@ -32,4 +32,6 @@
     <include file="db/changelog/db.changelog-detalles-facturas-relacion-factura.xml"/>
     <include file="db/changelog/db.changelog-recreate-perfiles.xml"/>
     <include file="db/changelog/db.changelog-usuarios-roles.xml"/>
+    <include file="db/changelog/db.changelog-crear-tabla-materiales.xml"/>
+    <include file="db/changelog/db.changelog-crear-tabla-productos-materiales.xml"/>
 </databaseChangeLog>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+    <changeSet id="26-crear-tabla-productos-materiales" author="german">
+
+        <!-- 1. Crear tabla intermedia productos_materiales -->
+        <createTable tableName="productos_materiales">
+            <column name="producto_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="material_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!-- 2. Agregar claves foráneas -->
+        <addForeignKeyConstraint
+                baseTableName="productos_materiales"
+                baseColumnNames="producto_id"
+                referencedTableName="productos"
+                referencedColumnNames="id"
+                onDelete="CASCADE"
+                constraintName="fk_productos_materiales_productos"/>
+
+        <addForeignKeyConstraint
+                baseTableName="productos_materiales"
+                baseColumnNames="material_id"
+                referencedTableName="materiales"
+                referencedColumnNames="id"
+                onDelete="CASCADE"
+                constraintName="fk_productos_materiales_materiales"/>
+
+        <!-- 3. Clave primaria compuesta -->
+        <addPrimaryKey
+                tableName="productos_materiales"
+                columnNames="producto_id, material_id"
+                constraintName="pk_productos_materiales"/>
+
+    </changeSet>
+
+
+</databaseChangeLog>
