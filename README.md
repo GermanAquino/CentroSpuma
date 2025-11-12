@@ -1,3 +1,2 @@
 # CentroSpuma
-Esta es la rama Api-gateway by Daniel Ferreira
-Esta es rama auth by Sebas
+Esta es la rama Commons para DTOs by GermanAquino
