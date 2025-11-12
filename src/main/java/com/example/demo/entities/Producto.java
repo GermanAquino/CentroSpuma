@@ -38,4 +38,12 @@ public class Producto extends AbstractEntity {
         inverseJoinColumns = @JoinColumn(name = "categoria_id")
     )
     private Set<Categoria> categorias = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+        name = "productos_materiales",
+        joinColumns = @JoinColumn(name = "producto_id"),
+        inverseJoinColumns = @JoinColumn(name = "material_id")
+    )
+    private Set<Material> materiales = new HashSet<>();
 }
