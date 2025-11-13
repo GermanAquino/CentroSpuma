@@ -1,11 +1,11 @@
 package com.example.apigerman.controller;
 
+import com.example.apigerman.config.PaginationConfigService;
 import com.example.apigerman.dto.MaterialRequestDTO;
 import com.example.apigerman.dto.MaterialResponseDTO;
 import com.example.apigerman.service.MaterialService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +16,7 @@ import java.util.List;
 public class MaterialController {
 
     private final MaterialService materialService;
+    private final PaginationConfigService paginationConfigService;
 
     // Crear un nuevo material
     @PostMapping
@@ -26,14 +27,20 @@ public class MaterialController {
     // Listar todos los materiales
     @GetMapping
     public List<MaterialResponseDTO> listarMateriales() {
-        Page<MaterialResponseDTO> page = materialService.listarMateriales(null, PageRequest.of(0, Integer.MAX_VALUE));
+        Page<MaterialResponseDTO> page = materialService.listarMateriales(
+                null,
+                paginationConfigService.defaultPageable()
+        );
         return page.getContent();
     }
 
-    // Listar materiales filtrando por nombre (usando path variable)
+    // Listar filtrando por nombre (PathVariable)
     @GetMapping("/nombre/{nombre}")
     public List<MaterialResponseDTO> listarPorNombre(@PathVariable String nombre) {
-        Page<MaterialResponseDTO> page = materialService.listarMateriales(nombre, PageRequest.of(0, Integer.MAX_VALUE));
+        Page<MaterialResponseDTO> page = materialService.listarMateriales(
+                nombre,
+                paginationConfigService.defaultPageable()
+        );
         return page.getContent();
     }
 
