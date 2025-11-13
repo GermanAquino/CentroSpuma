@@ -20,6 +20,9 @@ public class Categoria extends AbstractEntity {
     @Column(nullable = false)
     private String nombre;
 
+    @Column
+    private String descripcion;
+    
     @ManyToMany(mappedBy = "categorias")
     private Set<Producto> productos = new HashSet<>();
 }
