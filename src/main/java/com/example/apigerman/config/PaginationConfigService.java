@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 @Service
 public class PaginationConfigService {
 
-    @Value("${app.pagination.page-size:5}")
+    @Value("${app.pagination.page-size:10}")
     private int defaultPageSize;
 
     @Value("${app.pagination.page-number:0}")
