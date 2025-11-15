@@ -35,8 +35,7 @@ public class MaterialController {
         log.info("Listando materiales con paginación por defecto");
         Page<MaterialResponseDTO> page = materialService.listarMateriales(
                 null,
-                paginationConfigService.defaultPageable()
-        );
+                paginationConfigService.defaultPageable());
         log.info("Se obtuvieron {} materiales", page.getContent().size());
         return page.getContent();
     }
@@ -47,8 +46,7 @@ public class MaterialController {
         log.info("Buscando materiales filtrados por nombre: '{}'", nombre);
         Page<MaterialResponseDTO> page = materialService.listarMateriales(
                 nombre,
-                paginationConfigService.defaultPageable()
-        );
+                paginationConfigService.defaultPageable());
         log.info("Se encontraron {} materiales con nombre '{}'", page.getContent().size(), nombre);
         return page.getContent();
     }
@@ -57,15 +55,12 @@ public class MaterialController {
     @GetMapping("/{id}")
     public MaterialResponseDTO obtenerPorId(@PathVariable Long id) {
         log.info("Buscando material con ID={}", id);
-        return materialService.obtenerPorId(id)
-                .map(material -> {
-                    log.info("Material encontrado: ID={}, nombre={}", material.getId(), material.getNombre());
-                    return material;
-                })
-                .orElseThrow(() -> {
-                    log.warn("Material con ID={} no encontrado", id);
-                    return new RuntimeException("Material no encontrado");
-                });
+
+        // El service ya se encarga de lanzar ResourceNotFoundException si no existe
+        MaterialResponseDTO material = materialService.obtenerPorIdOrThrow(id);
+
+        log.info("Material encontrado: ID={}, nombre={}", material.getId(), material.getNombre());
+        return material;
     }
 
     // Actualizar material existente

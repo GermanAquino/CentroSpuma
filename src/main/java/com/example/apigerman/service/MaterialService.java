@@ -2,14 +2,15 @@ package com.example.apigerman.service;
 
 import com.example.apigerman.dto.MaterialRequestDTO;
 import com.example.apigerman.dto.MaterialResponseDTO;
+import com.example.apigerman.exception.ResourceNotFoundException;
 import com.example.apigerman.repository.MaterialRepository;
 import com.example.demo.entities.Material;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MaterialService {
@@ -29,23 +30,38 @@ public class MaterialService {
     // Listar materiales (búsqueda opcional por nombre)
     public Page<MaterialResponseDTO> listarMateriales(String nombre, Pageable pageable) {
         Page<Material> page;
+
         if (nombre != null && !nombre.isEmpty()) {
             page = materialRepository.findByNombreContainingIgnoreCase(nombre, pageable);
         } else {
             page = materialRepository.findAll(pageable);
         }
+
         return page.map(this::mapToResponse);
     }
 
-    // Obtener material por ID
-    public Optional<MaterialResponseDTO> obtenerPorId(Long id) {
+    // Obtener material por ID — versión usada internamente
+    public MaterialResponseDTO obtenerPorIdOrThrow(Long id) {
+        log.info("Buscando material con ID={} en la base de datos", id);
+
+        Material material = materialRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.warn("Material con ID={} no encontrado", id);
+                    return new ResourceNotFoundException("Material no encontrado con ID=" + id);
+                });
+
+        return mapToResponse(material);
+    }
+
+    // Método antiguo que devolvía Optional -> ya no se usará en el controlador
+    public java.util.Optional<MaterialResponseDTO> obtenerPorId(Long id) {
         return materialRepository.findById(id).map(this::mapToResponse);
     }
 
     // Actualizar un material existente
     public MaterialResponseDTO actualizarMaterial(Long id, MaterialRequestDTO dto) {
         Material material = materialRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Material no encontrado"));
+                .orElseThrow(() -> new ResourceNotFoundException("Material no encontrado con ID=" + id));
 
         material.setNombre(dto.getNombre());
         material.setDescripcion(dto.getDescripcion());
@@ -57,7 +73,8 @@ public class MaterialService {
     // Borrar material
     public void borrarMaterial(Long id) {
         Material material = materialRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Material no encontrado"));
+                .orElseThrow(() -> new ResourceNotFoundException("Material no encontrado con ID=" + id));
+
         materialRepository.delete(material);
     }
 
