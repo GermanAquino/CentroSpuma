@@ -30,10 +30,8 @@ public class VentaService {
         venta.setFecha(dto.getFecha());
         venta.setTotal(dto.getTotal());
 
-        // Guardamos primero la venta para tener un ID
         Venta savedVenta = ventaRepository.save(venta);
 
-        // Creamos los detalles
         if (dto.getDetalles() != null && !dto.getDetalles().isEmpty()) {
             List<DetalleVenta> detalles = dto.getDetalles().stream()
                     .map(d -> {
@@ -58,7 +56,6 @@ public class VentaService {
     // Listar ventas con búsqueda por nombre de cliente
     public Page<VentaResponseDTO> listarVentas(String nombreCliente, Pageable pageable) {
         Page<Venta> page;
-
         if (nombreCliente != null && !nombreCliente.isEmpty()) {
             page = ventaRepository.findByCliente_NombreContainingIgnoreCase(nombreCliente, pageable);
         } else {
@@ -85,7 +82,6 @@ public class VentaService {
         venta.setFecha(dto.getFecha());
         venta.setTotal(dto.getTotal());
 
-        // Actualizamos los detalles (se eliminan y se vuelven a crear)
         detalleVentaRepository.deleteAll(venta.getDetalles());
         venta.getDetalles().clear();
 
@@ -117,12 +113,13 @@ public class VentaService {
         ventaRepository.delete(venta);
     }
 
+    // Mapeo de entidad Venta a DTO de respuesta con nombre de cliente, RUC y productos
     private VentaResponseDTO mapToResponse(Venta venta) {
         List<DetalleVentaResponseDTO> detallesDTO = venta.getDetalles().stream()
                 .map(d -> new DetalleVentaResponseDTO(
                         d.getId(),
                         d.getProducto().getId(),
-                        d.getProducto().getNombre(), // agregamos nombre del producto
+                        d.getProducto().getNombre(), // nombre del producto
                         d.getCantidad(),
                         d.getPrecio()
                 ))
@@ -131,8 +128,8 @@ public class VentaService {
         return new VentaResponseDTO(
                 venta.getId(),
                 venta.getCliente().getId(),
-                venta.getCliente().getNombre(), // agregamos nombre del cliente
-                venta.getCliente().getRuc(),    // agregamos RUC del cliente
+                venta.getCliente().getNombre(), // nombre del cliente
+                venta.getCliente().getRuc(),    // RUC del cliente
                 venta.getFecha(),
                 venta.getTotal(),
                 detallesDTO

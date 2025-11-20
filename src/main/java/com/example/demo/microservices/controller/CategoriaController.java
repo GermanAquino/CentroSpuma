@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class CategoriaController {
 
     private final CategoriaService categoriaService;
+    private final PaginationConfigService paginationConfigService;
 
     // Crear una nueva categoría
     @PostMapping
@@ -24,24 +25,29 @@ public class CategoriaController {
     @GetMapping("/{id}")
     public ResponseEntity<CategoriaResponseDTO> obtener(@PathVariable Long id) {
         return categoriaService.obtenerPorId(id)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     // Listar categorías (con búsqueda opcional por nombre)
     @GetMapping
-    public Page<CategoriaResponseDTO> listar(
-        @RequestParam(defaultValue = "") String nombre,
-        @RequestParam(defaultValue = "0") int page,
-        @RequestParam(defaultValue = "10") int size
-    ) {
-        Pageable pageable = PageRequest.of(page, size);
-        return categoriaService.listarCategorias(nombre, pageable);
+    public List<CategoriaResponseDTO> listar(
+            @RequestParam(defaultValue = "") String nombre) {
+        log.info("Listando categorías con paginación por defecto y filtro nombre='{}'", nombre);
+
+        Page<CategoriaResponseDTO> page = categoriaService.listarCategorias(
+                nombre,
+                paginationConfigService.defaultPageable());
+
+        log.info("Se obtuvieron {} categorías", page.getContent().size());
+
+        return page.getContent();
     }
 
     // Actualizar una categoría
     @PutMapping("/{id}")
-    public ResponseEntity<CategoriaResponseDTO> actualizar(@PathVariable Long id, @RequestBody CategoriaRequestDTO dto) {
+    public ResponseEntity<CategoriaResponseDTO> actualizar(@PathVariable Long id,
+            @RequestBody CategoriaRequestDTO dto) {
         return ResponseEntity.ok(categoriaService.actualizarCategoria(id, dto));
     }
 

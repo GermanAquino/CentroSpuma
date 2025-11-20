@@ -41,6 +41,12 @@ public class CompraService {
         return mapToResponse(savedCompra);
     }
 
+    public Page<CompraResponseDTO> listarComprasPorProveedor(String nombreProveedor, Pageable pageable) {
+        return compraRepository
+                .findByProveedorNombreContainingIgnoreCase(nombreProveedor, pageable)
+                .map(this::mapToResponse);
+    }
+
     public Page<CompraResponseDTO> listarCompras(Pageable pageable) {
         return compraRepository.findAll(pageable).map(this::mapToResponse);
     }

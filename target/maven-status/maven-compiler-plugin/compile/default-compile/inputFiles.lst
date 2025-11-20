@@ -1,71 +1,108 @@
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\config\SwaggerConfig.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\DemoApplication.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\AbstractEntity.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Categoria.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Cliente.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Compra.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleCompra.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleFactura.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\DetalleVenta.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Factura.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Perfil.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Producto.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Proveedor.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Role.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Usuario.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\entities\Venta.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\enums\Rol.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\controller\UsuarioController.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\RolResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\PerfilRepository.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\RolRepository.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\repository\UsuarioRepository.java
-C:\Users\SebaXD\Desktop\CentroSpuma\src\main\java\com\example\demo\microservices\service\UsuarioService.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\api\DefaultApi.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\AbstractOpenApiSchema.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CategoriaRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CategoriaResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ClienteRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ClienteResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CompraRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CompraResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleCompraRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleCompraResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleFacturaRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleFacturaResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleVentaRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleVentaResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\FacturaRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\FacturaResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\PerfilRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\PerfilResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProductoRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProductoResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProveedorRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProveedorResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\RolResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\UsuarioRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\UsuarioResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\VentaRequestDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\VentaResponseDTO.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiCallback.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiClient.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiException.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiResponse.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\ApiKeyAuth.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\Authentication.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\HttpBasicAuth.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\HttpBearerAuth.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\Configuration.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\GzipRequestInterceptor.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\JSON.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\Pair.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ProgressRequestBody.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ProgressResponseBody.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ServerConfiguration.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ServerVariable.java
-C:\Users\SebaXD\Desktop\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\StringUtil.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\config\SwaggerConfig.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\config\WebConfig.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\DemoApplication.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\AbstractEntity.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Categoria.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Cliente.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Compra.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\DetalleCompra.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\DetalleFactura.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\DetalleVenta.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Factura.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Perfil.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Producto.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Proveedor.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Role.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Usuario.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\entities\Venta.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\enums\Rol.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\CategoriaController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\ClienteController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\ProductoController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\ProveedorController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\UsuarioController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\controller\VentaController.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\CategoriaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\CategoriaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ClienteRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ClienteResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\CompraRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\CompraResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\DetalleCompraRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\DetalleCompraResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\DetalleVentaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\DetalleVentaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\PerfilResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ProductoRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ProductoResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ProveedorRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\ProveedorResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\RolResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\UsuarioResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\VentaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\dto\VentaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\CategoriaRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\ClienteRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\CompraRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\DetalleCompraRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\DetalleVentaRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\PerfilRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\ProductoRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\ProveedorRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\RolRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\UsuarioRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\repository\VentaRepository.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\CategoriaService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\ClienteService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\CompraService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\DetalleCompraService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\ProductoService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\ProveedorService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\UsuarioService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\src\main\java\com\example\demo\microservices\service\VentaService.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\api\DefaultApi.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\AbstractOpenApiSchema.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CategoriaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CategoriaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ClienteRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ClienteResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CompraRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\CompraResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleCompraRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleCompraResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleFacturaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleFacturaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleVentaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\DetalleVentaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\FacturaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\FacturaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\PerfilRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\PerfilResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProductoRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProductoResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProveedorRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\ProveedorResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\RolResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\UsuarioRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\UsuarioResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\VentaRequestDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\dto\VentaResponseDTO.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiCallback.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiClient.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiException.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ApiResponse.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\ApiKeyAuth.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\Authentication.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\HttpBasicAuth.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\auth\HttpBearerAuth.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\Configuration.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\GzipRequestInterceptor.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\JSON.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\Pair.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ProgressRequestBody.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ProgressResponseBody.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ServerConfiguration.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\ServerVariable.java
+C:\Users\DanielF\Desktop\UNI\7MO SEMESTRE\Distri\Proyecto0.3\CentroSpuma\target\generated-sources\openapi\src\main\java\com\ejemplo\demo\invoker\StringUtil.java
