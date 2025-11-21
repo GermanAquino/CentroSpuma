@@ -1,6 +1,6 @@
 package com.example.demo.microservices.controller;
 
-import com.example.demo.microservices.config.PaginationConfigService;
+import com.example.demo.config.PaginationConfigService;
 import com.example.demo.microservices.dto.ProveedorRequestDTO;
 import com.example.demo.microservices.dto.ProveedorResponseDTO;
 import com.example.demo.microservices.service.ProveedorService;
@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-
+import com.example.demo.config.PaginationConfigService;
 import java.util.List;
 
 @RestController
