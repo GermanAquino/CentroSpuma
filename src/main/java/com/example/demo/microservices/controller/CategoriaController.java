@@ -29,17 +29,30 @@ public class CategoriaController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Listar categorías (con búsqueda opcional por nombre)
+    // Listar todas las categorías (sin filtro)
     @GetMapping
-    public List<CategoriaResponseDTO> listar(
-            @RequestParam(defaultValue = "") String nombre) {
-        log.info("Listando categorías con paginación por defecto y filtro nombre='{}'", nombre);
+    public List<CategoriaResponseDTO> listarCategorias() {
+        log.info("Listando categorías con paginación por defecto");
 
         Page<CategoriaResponseDTO> page = categoriaService.listarCategorias(
-                nombre,
+                null, // Sin filtro
                 paginationConfigService.defaultPageable());
 
         log.info("Se obtuvieron {} categorías", page.getContent().size());
+
+        return page.getContent();
+    }
+
+    // Listar categorías filtrando por nombre (PathVariable)
+    @GetMapping("/nombre/{nombre}")
+    public List<CategoriaResponseDTO> listarCategoriasPorNombre(@PathVariable String nombre) {
+        log.info("Buscando categorías filtradas por nombre: '{}'", nombre);
+
+        Page<CategoriaResponseDTO> page = categoriaService.listarCategorias(
+                nombre, // Con filtro
+                paginationConfigService.defaultPageable());
+
+        log.info("Se encontraron {} categorías con nombre '{}'", page.getContent().size(), nombre);
 
         return page.getContent();
     }
