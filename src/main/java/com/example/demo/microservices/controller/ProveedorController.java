@@ -44,17 +44,32 @@ public class ProveedorController {
                 });
     }
 
-    // LISTAR CON FILTRO POR NOMBRE
+    // Listar todos los proveedores
     @GetMapping
-    public List<ProveedorResponseDTO> listar(@RequestParam(defaultValue = "") String nombre) {
-        log.info("[GET] Listando proveedores con paginación por defecto (nombre='{}')", nombre);
+    public List<ProveedorResponseDTO> listarProveedores() {
+        log.info("Listando proveedores con paginación por defecto");
+
+        Page<ProveedorResponseDTO> page = proveedorService.listarProveedores(
+                null, // sin filtro
+                paginationConfigService.defaultPageable());
+
+        log.info("Se obtuvieron {} proveedores", page.getContent().size());
+
+        return page.getContent();
+    }
+
+    // Listar proveedores filtrando por nombre (PathVariable)
+    @GetMapping("/nombre/{nombre}")
+    public List<ProveedorResponseDTO> listarPorNombre(@PathVariable String nombre) {
+        log.info("Buscando proveedores filtrados por nombre: '{}'", nombre);
 
         Page<ProveedorResponseDTO> page = proveedorService.listarProveedores(
                 nombre,
-                paginationConfigService.defaultPageable()
-        );
+                paginationConfigService.defaultPageable());
 
-        log.info("Total de proveedores obtenidos: {}", page.getContent().size());
+        log.info("Se encontraron {} proveedores con nombre '{}'",
+                page.getContent().size(), nombre);
+
         return page.getContent();
     }
 
