@@ -1,2 +1,9 @@
 # Archivos de entorno
 .env
+
+# notas
+notas.txt
+
+# carpetas
+target/
+oldcode/
